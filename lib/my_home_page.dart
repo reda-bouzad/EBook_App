@@ -1,15 +1,29 @@
 import 'package:flutter/material.dart';
+import 'app_colors.dart' as AppColors;
 
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
 
   @override
-  State<MyWidget> createState() => _MyWidgetState();
+  State<MyHomePage> createState() => _MyWidgetState();
 }
 
-class _MyWidgetState extends State<MyWidget> {
+class _MyWidgetState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      color: const Color.fromARGB(255, 16, 16, 92),
+      child: const SafeArea(
+        child: Scaffold(
+          body: Column(
+            children: [
+              Row(
+                children: [Icon(Icons.search), Icon(Icons.notifications)],
+              )
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
